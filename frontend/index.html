@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>carBetting</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <h1>&#127950; carBetting</h1>
+    <div id="balance-display">Solde : <span id="balance">1000</span> <span class="coin">&#9733;</span></div>
+  </header>
+
+  <main>
+    <section class="video-section">
+      <div class="video-wrapper">
+        <img id="video-stream" src="/video_feed" alt="Flux vidéo" />
+      </div>
+    </section>
+
+    <aside class="game-panel">
+      <div class="panel-block timer-block">
+        <div class="panel-title">Round <span id="round-id">1</span></div>
+        <div class="timer-bar-container">
+          <div id="timer-bar" class="timer-bar"></div>
+        </div>
+        <div class="timer-value"><span id="timer">30</span>s</div>
+      </div>
+
+      <div class="panel-block counter-block">
+        <div class="panel-title">Véhicules passés</div>
+        <div id="vehicle-count" class="big-number">0</div>
+      </div>
+
+      <div class="panel-block phase-block">
+        <div id="phase-label" class="phase-label betting">PARIS OUVERTS</div>
+      </div>
+
+      <div class="panel-block bets-block">
+        <div class="panel-title">Ton pari</div>
+        <div class="bet-options" id="bet-options"></div>
+        <div class="bet-amount-row">
+          <label for="bet-amount">Mise :</label>
+          <input type="number" id="bet-amount" value="100" min="10" step="10" />
+          <span class="coin">&#9733;</span>
+        </div>
+        <div id="bet-feedback" class="bet-feedback"></div>
+      </div>
+
+      <div class="panel-block result-block" id="result-block" style="display:none">
+        <div class="panel-title">Résultat</div>
+        <div id="result-content"></div>
+      </div>
+
+      <div class="panel-block history-block">
+        <div class="panel-title">Historique</div>
+        <ul id="history-list"></ul>
+      </div>
+    </aside>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
